@@ -12,9 +12,9 @@ class ClimateZone{
         cityList = new ArrayList<City>();
     }
 
-    public ClimateZone(String f) throws IOException{
+    public ClimateZone(String a) throws IOException{
         cityList = new ArrayList<City>();
-        FileInputStream myFile = new FileInputStream(f);
+        FileInputStream myFile = new FileInputStream(a);
         Scanner myFileReader = new Scanner(myFile);
         while (myFileReader.hasNext()) {
             City city = new City(myFileReader.next(), myFileReader.next(), myFileReader.nextDouble(), myFileReader.nextDouble());   
